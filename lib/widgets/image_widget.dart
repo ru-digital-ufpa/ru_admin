@@ -48,6 +48,7 @@ class _ImageWidgetState extends State<ImageWidget> {
               String inputText =
                   jsonEncode({'imageUrl': imageLink.text, 'isImage': isImage});
               await postDataToServer(inputText);
+              imageLink.clear;
               showDialog(
                 context: context,
                 builder: (context) => AlertDialog(
